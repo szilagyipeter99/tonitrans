@@ -1,0 +1,81 @@
+.modal-wrap {
+	position: fixed;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	width: 100%;
+	height: 100%;
+	background: rgb(0, 0, 0, 0.25);
+	z-index: 100;
+}
+
+.modal-exit {
+	background: rgb(255, 255, 255, 0.8);
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	margin: auto;
+	margin-top: 1.45rem;
+	text-align: center;
+}
+
+.modal-exit:hover {
+	cursor: pointer;
+}
+
+.modal-exit::before {
+	content: "✕";
+	color: black;
+	font-size: 1.45rem;
+	line-height: 2.45rem;
+	font-weight: 300;
+}
+
+.modal-wrap button {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.25);
+	line-height: 4rem;
+	color: white;
+	font-size: 5.75rem;
+	border-radius: 8px;
+	z-index: 999;
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.modal-wrap button:nth-of-type(1) {
+	left: 5px;
+	padding: 0.25rem 0.5rem 0.45rem 0.675rem;
+}
+
+.modal-wrap button:nth-of-type(2) {
+	right: 5px;
+	padding: 0.25rem 0.5rem 0.45rem 0.675rem;
+}
+
+.modal-wrap img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: auto;
+	max-width: 85%;
+	max-height: 85%;
+	border-radius: 3px;
+}
+
+.modal-wrap button:hover {
+	cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+	.modal-wrap button:nth-of-type(1) {
+		left: 15px;
+	}
+
+	.modal-wrap button:nth-of-type(2) {
+		right: 15px;
+	}
+}

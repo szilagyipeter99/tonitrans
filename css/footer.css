@@ -1,0 +1,83 @@
+@import "constants.css";
+
+footer {
+	width: 100%;
+	text-align: left;
+	padding: 2rem 0;
+	margin-top: 4rem;
+}
+
+footer .main-container {
+	width: 97.5%;
+	position: relative;
+	background-color: var(--g-800);
+	border: 1px solid var(--g-500);
+	border-radius: 2rem;
+	max-width: 1200px;
+	margin: auto;
+	padding: 3rem;
+	box-shadow: 0 25px 50px -12px rgb(25 255 25 / 0.075);
+}
+
+footer .main-container .footer-top {
+	margin-bottom: 1.5rem;
+}
+
+footer .main-container .footer-top img {
+	margin-bottom: 1rem;
+	width: 225px;
+}
+
+footer .main-container .footer-top .footer-desc {
+	color: var(--g-100);
+	margin-bottom: 2rem;
+}
+
+footer .main-container .footer-top .footer-icons {
+	display: flex;
+	flex-direction: row;
+}
+
+footer .main-container .footer-top .footer-icons img {
+	width: 40px;
+	margin-right: 1.25rem;
+}
+
+footer .main-container .footer-bottom {
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+footer .main-container .footer-bottom p {
+	font-weight: 500;
+	color: var(--g-300);
+}
+
+footer .main-container .footer-bottom p a {
+	font-weight: 600;
+	color: var(--l-300);
+}
+
+footer .main-container .footer-bottom .footer-links {
+	margin-left: auto;
+	display: flex;
+	flex-direction: row;
+	color: var(--g-300);
+}
+
+footer .main-container .footer-bottom .footer-links a:hover {
+	text-decoration: underline;
+}
+
+footer .main-container .footer-bottom .footer-links a:not(:last-child) {
+	padding-right: 1rem;
+	margin-right: 1rem;
+	border-right: 1px solid grey;
+}
+
+@media only screen and (min-width: 768px) {
+	footer .main-container .footer-bottom {
+		flex-direction: row;
+	}
+}

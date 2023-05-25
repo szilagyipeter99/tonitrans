@@ -1,0 +1,120 @@
+@import "constants.css";
+
+.menu-button {
+	display: block;
+	position: absolute;
+	z-index: 99;
+	top: 10px;
+	left: 18px;
+	text-align: left;
+}
+
+.menu-button svg {
+	overflow: visible;
+	margin: 1rem 0;
+}
+
+.menu-button svg rect {
+	fill: var(--g-50);
+	transition: 0.4s;
+}
+
+.menu-button:hover {
+	cursor: pointer;
+}
+
+.menu-button-active {
+	position: fixed;
+}
+
+.menu-button-active svg rect {
+	fill: var(--g-800);
+}
+
+.menu-button-active svg rect:nth-child(1) {
+	y: 12px;
+	transform-origin: 16px 13px;
+	transform: rotate(-45deg);
+}
+
+.menu-button-active svg rect:nth-child(2) {
+	transform-origin: 16px 13px;
+	transform: rotate(45deg);
+}
+
+.menu-button-active svg rect:nth-child(3) {
+	y: 12px;
+	transform-origin: 16px 13px;
+	transform: rotate(45deg);
+}
+
+.navbar {
+	z-index: 99;
+	position: relative;
+}
+
+.navbar img {
+	width: 50%;
+	max-width: 840px;
+	margin: 0.5rem 1rem;
+	margin-left: auto;
+	margin: 0 auto 4rem;
+	pointer-events: none;
+}
+
+.navbar .blur {
+	display: none;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	width: 100%;
+	height: 100%;
+	transition: 0.3s;
+}
+
+.navbar .blur.blur-active {
+	display: block;
+	opacity: 1;
+}
+
+.navbar ul {
+	display: flex;
+	width: 0;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	flex-direction: column;
+	text-align: left;
+	background: var(--l-500);
+	transition: 0.3s;
+	z-index: 98;
+	padding: 5rem 0;
+	margin-right: -2rem;
+	overflow: hidden;
+}
+
+.navbar ul.responsive-active {
+	width: 225px;
+	margin-right: 0;
+	padding: 5rem 1.25rem;
+}
+
+.navbar ul li {
+	margin-right: 0;
+	margin-bottom: 1rem;
+}
+
+.navbar ul li a {
+	font-size: 1.125rem;
+	font-weight: 400;
+	color: var(--g-800);
+}
+
+.navbar ul li button {
+	margin-top: 0.5rem;
+}
