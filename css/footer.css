@@ -35,12 +35,12 @@ footer .main-container .footer-top .footer-desc {
 
 footer .main-container .footer-top .footer-icons {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
-footer .main-container .footer-top .footer-icons img {
-	width: 40px;
-	margin-right: 1.25rem;
+footer .main-container .footer-top .footer-icons a {
+	margin-right: 1rem;
+	margin-bottom: 0.25rem;
 }
 
 footer .main-container .footer-bottom {
@@ -54,16 +54,15 @@ footer .main-container .footer-bottom p {
 	color: var(--g-300);
 }
 
-footer .main-container .footer-bottom p a {
-	font-weight: 600;
-	color: var(--l-300);
-}
-
 footer .main-container .footer-bottom .footer-links {
 	margin-left: auto;
 	display: flex;
 	flex-direction: row;
 	color: var(--g-300);
+}
+
+footer .main-container .footer-bottom .footer-links a {
+	font-weight: 400;
 }
 
 footer .main-container .footer-bottom .footer-links a:hover {
@@ -77,6 +76,12 @@ footer .main-container .footer-bottom .footer-links a:not(:last-child) {
 }
 
 @media only screen and (min-width: 768px) {
+	footer .main-container .footer-top .footer-icons {
+		flex-direction: row;
+	}
+	footer .main-container .footer-top .footer-icons a {
+		margin-bottom: 0;
+	}
 	footer .main-container .footer-bottom {
 		flex-direction: row;
 	}

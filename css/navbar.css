@@ -51,11 +51,12 @@
 .navbar {
 	z-index: 99;
 	position: relative;
+	padding: 1.5rem;
 }
 
 .navbar img {
-	width: 50%;
-	max-width: 840px;
+	width: 100%;
+	max-width: 1000px;
 	margin: 0.5rem 1rem;
 	margin-left: auto;
 	margin: 0 auto 4rem;
@@ -107,6 +108,7 @@
 .navbar ul li {
 	margin-right: 0;
 	margin-bottom: 1rem;
+	margin-left: 1.5rem;
 }
 
 .navbar ul li a {

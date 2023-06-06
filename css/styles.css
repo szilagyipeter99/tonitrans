@@ -37,8 +37,12 @@ ul {
 
 a {
 	text-decoration: none;
-	color: inherit;
-	transition: 0.2s;
+	color: var(--l-400);
+	font-weight: 500;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 button {
@@ -55,6 +59,10 @@ textarea {
 
 b {
 	font-weight: 500;
+}
+
+img {
+	max-width: 100%;
 }
 
 .flex {
@@ -141,34 +149,6 @@ b {
 	border-top: 20px solid var(--g-800);
 }
 
-.navbar {
-	display: flex;
-	flex-direction: row;
-	padding: 1.5rem;
-}
-
-.navbar .navbar-title {
-	margin-top: -0.25rem;
-	display: flex;
-	flex-direction: row;
-	pointer-events: none;
-}
-
-.navbar .navbar-title img {
-	width: 30px;
-	height: 30px;
-	margin-right: 0.5rem;
-}
-
-.navbar .navbar-title h2 {
-	font-size: 1.25rem;
-	font-weight: 600;
-}
-
-.navbar ul li {
-	margin-left: 1.5rem;
-}
-
 .services {
 	width: 80%;
 	text-align: left;
@@ -176,6 +156,51 @@ b {
 	margin: auto;
 	color: var(--g-200);
 	font-size: 1.125rem;
+}
+
+.vehicles {
+	width: 80%;
+	text-align: left;
+	max-width: 1200px;
+	margin: auto;
+	color: var(--g-200);
+	font-size: 1.125rem;
+}
+
+.vehicles h2 {
+	color: var(--l-50);
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+}
+
+.vehicles h3 {
+	width: fit-content;
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid var(--l-200);
+}
+
+.vehicles ul {
+	background-color: rgb(0 0 0 / 0.125);
+	border-radius: 0.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 3rem;
+	padding: 1.5rem;
+	font-weight: 400;
+}
+
+.vehicles ul li:first-child {
+	margin-bottom: 0.25rem;
+}
+
+.vehicles .double-img {
+	display: flex;
+	flex-direction: column;
+}
+
+.vehicles .double-img img {
+	width: 100%;
+	border-radius: 0.25rem;
+	margin-bottom: 0.25rem;
 }
 
 .services h2 {
@@ -209,6 +234,19 @@ b {
 }
 
 @media only screen and (min-width: 768px) {
+	.vehicles .double-img {
+		flex-direction: row;
+	}
+
+	.vehicles .double-img img {
+		width: 49.5%;
+	}
+	.vehicles .double-img img:first-child {
+		margin-right: 1%;
+	}
+	.vehicles ul {
+		padding: 1rem;
+	}
 	.left-strip {
 		left: 20px;
 	}
