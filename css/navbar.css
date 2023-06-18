@@ -51,16 +51,16 @@
 .navbar {
 	z-index: 99;
 	position: relative;
-	padding: 1.5rem;
+	overflow: hidden;
 }
 
 .navbar img {
-	width: 100%;
-	max-width: 1000px;
-	margin: 0.5rem 1rem;
-	margin-left: auto;
-	margin: 0 auto 4rem;
+	width: 200%;
+	max-width: 1536px;
+	margin: 0.25rem 0 2rem -47.5%;
 	pointer-events: none;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
 }
 
 .navbar .blur {
@@ -119,4 +119,16 @@
 
 .navbar ul li button {
 	margin-top: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.navbar img {
+		margin: 1.5rem auto 4rem;
+		width: 100%;
+		max-width: 1000px;
+		border: 2px solid var(--g-600);
+		border-bottom: 4px solid var(--l-500);
+		background: url("../img/noise.svg"), var(--g-900);
+		background-size: 275px, cover;
+	}
 }

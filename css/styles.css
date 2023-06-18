@@ -21,6 +21,8 @@ html {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	text-align: center;
 	min-height: 100vh;
@@ -29,6 +31,8 @@ body {
 	line-height: inherit;
 	font-weight: 300;
 	background-color: var(--g-800);
+	/* background: url("../img/noise.svg"), var(--g-800);
+	background-size: 250px, cover; */
 }
 
 ul {
@@ -72,38 +76,20 @@ img {
 	justify-content: center;
 }
 
-.yellow-button {
-	padding: 1rem 1.5rem;
-	font-size: 0.875rem;
-	font-weight: 500;
-	background-color: var(--y-300);
-	border-radius: 99px;
-	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-}
-
-.white-button {
-	padding: 1rem 1.5rem;
-	font-size: 0.875rem;
-	font-weight: 500;
-	background-color: var(--g-50);
-	border-radius: 99px;
-	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-}
-
 .left-strip {
 	position: absolute;
 	left: 0px;
-	top: 100px;
-	width: 15px;
+	top: 85px;
+	width: 5px;
 	height: calc(100% - 100px);
 	background-color: var(--l-500);
 }
 
 .left-strip-2 {
 	position: absolute;
-	left: 15px;
-	top: 100px;
-	width: 5px;
+	left: 5px;
+	top: 95px;
+	width: 3px;
 	height: calc(100% - 100px);
 	background-color: var(--l-900);
 }
@@ -115,7 +101,7 @@ img {
 	width: 0;
 	height: 0;
 	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
+	/* border-right: 20px solid transparent; */
 	border-top: 20px solid var(--g-800);
 }
 
@@ -123,28 +109,28 @@ img {
 	display: block;
 	position: absolute;
 	right: 0px;
-	top: 100px;
-	width: 15px;
-	height: calc(100% - 100px);
+	top: 25px;
+	width: 5px;
+	height: calc(100% - 50px);
 	background-color: var(--l-500);
 }
 
 .right-strip-2 {
 	position: absolute;
-	right: 15px;
-	top: 100px;
-	width: 5px;
-	height: calc(100% - 100px);
+	right: 5px;
+	top: 35px;
+	width: 3px;
+	height: calc(100% - 50px);
 	background-color: var(--l-900);
 }
 
 .right-strip-cover {
 	position: absolute;
 	right: 0px;
-	top: 100px;
+	top: 50px;
 	width: 0;
 	height: 0;
-	border-left: 20px solid transparent;
+	/* border-left: 20px solid transparent; */
 	border-right: 20px solid transparent;
 	border-top: 20px solid var(--g-800);
 }
@@ -152,59 +138,89 @@ img {
 .services {
 	width: 80%;
 	text-align: left;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: auto;
-	color: var(--g-200);
+	color: var(--g-900);
 	font-size: 1.125rem;
 }
 
-.vehicles {
+section.vehicles,
+section.about,
+section.appl,
+section.contacts {
 	width: 80%;
 	text-align: left;
-	max-width: 1200px;
-	margin: auto;
-	color: var(--g-200);
+	max-width: 1100px;
+	margin: 0 auto auto;
+	color: var(--g-300);
 	font-size: 1.125rem;
 }
 
-.vehicles h2 {
-	color: var(--l-50);
-	font-size: 2.5rem;
-	margin-bottom: 2rem;
+section.vehicles h2,
+section.about h2,
+section.appl h2,
+section.contacts h2 {
+	color: var(--g-100);
+	font-size: 2rem;
+	line-height: 2.5rem;
+	margin-bottom: 1.25rem;
 }
 
-.vehicles h3 {
+section.vehicles h3 {
+	color: var(--g-200);
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	font-weight: 600;
 	width: fit-content;
 	margin-bottom: 0.5rem;
-	border-bottom: 1px solid var(--l-200);
+	border-bottom: 2px solid var(--g-500);
 }
 
-.vehicles ul {
-	background-color: rgb(0 0 0 / 0.125);
+section.vehicles ul {
+	background-color: rgba(0, 0, 0, 0.125);
+	border: 2px solid var(--g-700);
+	border-left: 4px solid var(--l-400);
 	border-radius: 0.5rem;
 	margin-top: 0.5rem;
 	margin-bottom: 3rem;
 	padding: 1.5rem;
 	font-weight: 400;
+	font-size: 1.0625rem;
 }
 
-.vehicles ul li:first-child {
+section.vehicles ul li:first-child {
 	margin-bottom: 0.25rem;
 }
 
-.vehicles .double-img {
+section.vehicles .double-img {
 	display: flex;
 	flex-direction: column;
 }
 
-.vehicles .double-img img {
+section.vehicles .double-img img {
 	width: 100%;
-	border-radius: 0.25rem;
 	margin-bottom: 0.25rem;
 }
 
+section.contacts .contact-box {
+	/* width: fit-content; */
+	background-color: rgba(0, 0, 0, 0.125);
+	border: 2px solid var(--g-700);
+	border-left: 4px solid var(--g-600);
+	border-radius: 0.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	padding: 1.5rem;
+	font-size: 1.0625rem;
+	font-weight: 500;
+}
+
+section.contacts .contact-box p span {
+	font-weight: 300;
+}
+
 .services h2 {
-	color: var(--l-50);
+	color: var(--g-50);
 	font-size: 2.5rem;
 	margin-bottom: 2rem;
 }
@@ -234,32 +250,35 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-	.vehicles .double-img {
+	section.vehicles .double-img {
 		flex-direction: row;
 	}
-
-	.vehicles .double-img img {
-		width: 49.5%;
+	section.vehicles .double-img img {
+		width: 49.875%;
 	}
-	.vehicles .double-img img:first-child {
-		margin-right: 1%;
+	section.vehicles .double-img img:first-child {
+		margin-right: 0.25%;
 	}
-	.vehicles ul {
-		padding: 1rem;
+	section.vehicles ul {
+		padding: 1rem 1.5rem;
 	}
 	.left-strip {
+		width: 15px;
 		left: 20px;
 	}
 	.left-strip-2 {
+		width: 5px;
 		left: 35px;
 	}
 	.left-strip-cover {
 		left: 20px;
 	}
 	.right-strip {
+		width: 15px;
 		right: 20px;
 	}
 	.right-strip-2 {
+		width: 5px;
 		right: 35px;
 	}
 	.right-strip-cover {
