@@ -215,8 +215,10 @@ section.contacts .contact-box {
 	font-weight: 500;
 }
 
-section.contacts .contact-box p span {
+section.contacts .contact-box p span a {
 	font-weight: 300;
+	color: var(--g-300);
+	border-bottom: 2px solid var(--g-800);
 }
 
 .services h2 {

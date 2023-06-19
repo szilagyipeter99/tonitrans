@@ -55,12 +55,15 @@
 }
 
 .navbar img {
-	width: 200%;
-	max-width: 1536px;
-	margin: 0.25rem 0 2rem -47.5%;
+	width: 93%;
+	max-width: 768px;
+	margin: 1.5rem 0 3rem;
 	pointer-events: none;
-	padding: 1rem 2rem;
 	border-radius: 1rem;
+}
+
+.navbar img.desktop {
+	display: none;
 }
 
 .navbar .blur {
@@ -125,10 +128,17 @@
 	.navbar img {
 		margin: 1.5rem auto 4rem;
 		width: 100%;
+		padding: 1rem 2rem;
 		max-width: 1000px;
 		border: 2px solid var(--g-600);
 		border-bottom: 4px solid var(--l-500);
 		background: url("../img/noise.svg"), var(--g-900);
 		background-size: 275px, cover;
+	}
+	.navbar img.desktop {
+		display: block;
+	}
+	.navbar img.mobile {
+		display: none;
 	}
 }
